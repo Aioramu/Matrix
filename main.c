@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ncurses.h>
+#include <ncurses.h>//as a replacement for a conio.h
 #include <string.h>
 #include <time.h>
 
 int main()
     {
-    srand(time(NULL));
+    srand(time(NULL));//setting the current time for generating different numbers
     int m = rand()%5+3;
     int n = rand()%7+3;
     int i = 0;
@@ -15,10 +15,10 @@ int main()
     int indmin [2];
     printf ("%i \n", n);
     printf ("%i \n", m);
-    int Array [n] [m];
+    int Array [n] [m];//array assignment
     for (i = 0; i < n; i++){
         for (j = 0; j < m; j++){
-            Array [i] [j] = rand()%10+1;
+            Array [i] [j] = rand()%10+1;//random array assigment
             printf ("%3.0i ", Array [i][j]);
         }
         printf ("\n");
